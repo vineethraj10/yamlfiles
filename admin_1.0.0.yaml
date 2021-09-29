@@ -1,0 +1,29 @@
+info:
+  version: 1.0.0
+  title: admin
+  name: admin
+gateways:
+  - datapower-api-gateway
+plans:
+  default-plan:
+    rate-limits:
+      default:
+        value: 100/1hour
+    title: Default Plan
+    description: Default Plan
+    approval: false
+apis:
+  basic1.0.0:
+    $ref: ./basic_1.0.0.yaml
+visibility:
+  view:
+    type: public
+    orgs: []
+    tags: []
+    enabled: true
+  subscribe:
+    type: authenticated
+    orgs: []
+    tags: []
+    enabled: true
+product: 1.0.0
